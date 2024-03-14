@@ -1,0 +1,27 @@
+﻿@page
+@model Heros.Pages.Stats.IndexModel
+@{
+}
+
+<strong>Total Unique Counties:</strong> @Model.Counties.Count()
+
+<table>
+    <thead>
+        <tr>
+            <td><strong>County</strong></td>
+            <td><strong>State</strong></td>
+            <td><strong>Hero Count</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var county in Model.Counties)
+        {
+            <tr>
+                <td>@county.Name</td>
+                <td>@county.State</td>
+                <td>@county.HeroCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

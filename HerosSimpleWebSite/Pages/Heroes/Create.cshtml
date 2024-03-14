@@ -1,0 +1,219 @@
+﻿@page
+@model Heros.Pages.Heroes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Hero</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Hero.War" class="control-label"></label>
+                <input asp-for="Hero.War" class="form-control" />
+                <span asp-validation-for="Hero.War" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.Specialization" class="control-label"></label>
+                <input asp-for="Hero.Specialization" class="form-control" />
+                <span asp-validation-for="Hero.Specialization" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.Group" class="control-label"></label>
+                <input asp-for="Hero.Group" class="form-control" />
+                <span asp-validation-for="Hero.Group" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.Name" class="control-label"></label>
+                <input asp-for="Hero.Name" class="form-control" />
+                <span asp-validation-for="Hero.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.Nickname" class="control-label"></label>
+                <input asp-for="Hero.Nickname" class="form-control" />
+                <span asp-validation-for="Hero.Nickname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.Prefix" class="control-label"></label>
+                <input asp-for="Hero.Prefix" class="form-control" />
+                <span asp-validation-for="Hero.Prefix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.Suffix" class="control-label"></label>
+                <input asp-for="Hero.Suffix" class="form-control" />
+                <span asp-validation-for="Hero.Suffix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.HeroType" class="control-label"></label>
+                <input asp-for="Hero.HeroType" class="form-control" />
+                <span asp-validation-for="Hero.HeroType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.FlagStatus" class="control-label"></label>
+                <input asp-for="Hero.FlagStatus" class="form-control" />
+                <span asp-validation-for="Hero.FlagStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.FlagReceiveStatus" class="control-label"></label>
+                <input asp-for="Hero.FlagReceiveStatus" class="form-control" />
+                <span asp-validation-for="Hero.FlagReceiveStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.FlagReceivedDate" class="control-label"></label>
+                <input asp-for="Hero.FlagReceivedDate" class="form-control" />
+                <span asp-validation-for="Hero.FlagReceivedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.FlagSponsor" class="control-label"></label>
+                <input asp-for="Hero.FlagSponsor" class="form-control" />
+                <span asp-validation-for="Hero.FlagSponsor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.MilitaryBranch" class="control-label"></label>
+                <input asp-for="Hero.MilitaryBranch" class="form-control" />
+                <span asp-validation-for="Hero.MilitaryBranch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.BirthMonth" class="control-label"></label>
+                <input asp-for="Hero.BirthMonth" class="form-control" />
+                <span asp-validation-for="Hero.BirthMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.BirthDay" class="control-label"></label>
+                <input asp-for="Hero.BirthDay" class="form-control" />
+                <span asp-validation-for="Hero.BirthDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.BirthYear" class="control-label"></label>
+                <input asp-for="Hero.BirthYear" class="form-control" />
+                <span asp-validation-for="Hero.BirthYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.FirstName" class="control-label"></label>
+                <input asp-for="Hero.FirstName" class="form-control" />
+                <span asp-validation-for="Hero.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.MiddleName" class="control-label"></label>
+                <input asp-for="Hero.MiddleName" class="form-control" />
+                <span asp-validation-for="Hero.MiddleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.LastName" class="control-label"></label>
+                <input asp-for="Hero.LastName" class="form-control" />
+                <span asp-validation-for="Hero.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.Rank" class="control-label"></label>
+                <input asp-for="Hero.Rank" class="form-control" />
+                <span asp-validation-for="Hero.Rank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.DateOfDeath" class="control-label"></label>
+                <input asp-for="Hero.DateOfDeath" class="form-control" />
+                <span asp-validation-for="Hero.DateOfDeath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.TreeStatus" class="control-label"></label>
+                <input asp-for="Hero.TreeStatus" class="form-control" />
+                <span asp-validation-for="Hero.TreeStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.TreeLatitude" class="control-label"></label>
+                <input asp-for="Hero.TreeLatitude" class="form-control" />
+                <span asp-validation-for="Hero.TreeLatitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.TreeLongitude" class="control-label"></label>
+                <input asp-for="Hero.TreeLongitude" class="form-control" />
+                <span asp-validation-for="Hero.TreeLongitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.CauseOfDeath" class="control-label"></label>
+                <input asp-for="Hero.CauseOfDeath" class="form-control" />
+                <span asp-validation-for="Hero.CauseOfDeath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.LocationOfDeath" class="control-label"></label>
+                <input asp-for="Hero.LocationOfDeath" class="form-control" />
+                <span asp-validation-for="Hero.LocationOfDeath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginCity" class="control-label"></label>
+                <input asp-for="Hero.OriginCity" class="form-control" />
+                <span asp-validation-for="Hero.OriginCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginCounty" class="control-label"></label>
+                <input asp-for="Hero.OriginCounty" class="form-control" />
+                <span asp-validation-for="Hero.OriginCounty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginState" class="control-label"></label>
+                <input asp-for="Hero.OriginState" class="form-control" />
+                <span asp-validation-for="Hero.OriginState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginLocation" class="control-label"></label>
+                <input asp-for="Hero.OriginLocation" class="form-control" />
+                <span asp-validation-for="Hero.OriginLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginRegionCode" class="control-label"></label>
+                <input asp-for="Hero.OriginRegionCode" class="form-control" />
+                <span asp-validation-for="Hero.OriginRegionCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginRegionName" class="control-label"></label>
+                <input asp-for="Hero.OriginRegionName" class="form-control" />
+                <span asp-validation-for="Hero.OriginRegionName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginDivisionCode" class="control-label"></label>
+                <input asp-for="Hero.OriginDivisionCode" class="form-control" />
+                <span asp-validation-for="Hero.OriginDivisionCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginDivisionName" class="control-label"></label>
+                <input asp-for="Hero.OriginDivisionName" class="form-control" />
+                <span asp-validation-for="Hero.OriginDivisionName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginStateFipsCode" class="control-label"></label>
+                <input asp-for="Hero.OriginStateFipsCode" class="form-control" />
+                <span asp-validation-for="Hero.OriginStateFipsCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginStateName" class="control-label"></label>
+                <input asp-for="Hero.OriginStateName" class="form-control" />
+                <span asp-validation-for="Hero.OriginStateName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.CountyCodeFips" class="control-label"></label>
+                <input asp-for="Hero.CountyCodeFips" class="form-control" />
+                <span asp-validation-for="Hero.CountyCodeFips" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hero.OriginCountyName" class="control-label"></label>
+                <input asp-for="Hero.OriginCountyName" class="form-control" />
+                <span asp-validation-for="Hero.OriginCountyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

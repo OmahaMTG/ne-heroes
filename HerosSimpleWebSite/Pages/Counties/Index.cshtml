@@ -1,0 +1,22 @@
+﻿@page
+@model Heros.Pages.Counties.IndexModel
+@{
+}
+
+@{
+    string currentState = "";
+}
+@foreach (var stateAndCounty in Model.StatesAndCounties)
+{
+
+    if (currentState != stateAndCounty.State)
+    {
+        currentState = stateAndCounty.State;
+        <br />
+        <h3>@stateAndCounty.State</h3>
+    }
+    <div style="padding-left: 10px;">
+        <a asp-page="../Heroes/Index" asp-route-state="@stateAndCounty.State" asp-route-county="@stateAndCounty.County">@stateAndCounty.County, @stateAndCounty.State</a>
+    </div>
+
+}
