@@ -40,4 +40,4 @@ jobs:
     - name: Build
       run: dotnet build HeroesMgmt/Api/Api.csproj --no-restore
     - name: Publish
-      run: dotnet publish HeroesMgmt/Api/Api.csproj --no-restore
+      run: dotnet publish HeroesMgmt/Api/Api.csproj -o publish/ --no-restore
