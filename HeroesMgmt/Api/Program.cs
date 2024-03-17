@@ -6,6 +6,7 @@ namespace Api
 {
     public class Query
     {
+        [UseFiltering]
         public IQueryable<Hero> GetHeroes(HeroDbContext dbContext)
         {
             return dbContext.Heroes;
@@ -23,6 +24,7 @@ namespace Api
             builder.Services.AddControllers();
             builder.Services.AddGraphQLServer()
                 .RegisterDbContext<HeroDbContext>(DbContextKind.Pooled)
+                .AddFiltering()
                 .AddQueryType<Query>();
 
             var app = builder.Build();
