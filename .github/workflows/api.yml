@@ -15,6 +15,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Please refer to https://github.com/Azure/login#configure-deployment-credentials for help on the Azure login action and setting up your secrets 
+    # This template also deploys the resourcegroup and not only the resources within the resource group. For this to work, your service principal needs access on the subscription level. You can create the service principal through: 
+    # az ad sp create-for-rbac --name "spname" --sdk-auth --role contributor --scopes /subscriptions/<subscription-id>
+    # This example uses federated identity (OIDC) for authentication
+    - name: Azure Login with Federated Identity
+      uses: azure/login@v1
+      with:
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -24,3 +35,5 @@ jobs:
       run: dotnet restore HeroesMgmt/Api/Api.csproj
     - name: Build
       run: dotnet build HeroesMgmt/Api/Api.csproj --no-restore
+    - name: Publish
+      run: dotnet publish HeroesMgmt/Api/Api.csproj --no-restore
