@@ -29,7 +29,7 @@ namespace Heros.Pages.Heroes
             CurrentPage = pageNumber == 0 ? 1 : pageNumber;
 
 
-            IQueryable<Hero> heroes = context.Heroes.Where(h => !h.Deleted);
+            IQueryable<Hero> heroes = context.Heroes.Where(h => !h.Deleted).OrderBy(h => h.LastName);
             if (!string.IsNullOrWhiteSpace(CurrentCounty))
             {
                 if(!string.IsNullOrWhiteSpace(CurrentState))
@@ -58,7 +58,11 @@ namespace Heros.Pages.Heroes
         {
             var query = context
                 .Heroes
-                .Where(h => (!h.Deleted) && h.OriginCountyName == county);
+                .Where(h => (!h.Deleted));
+            if(!string.IsNullOrWhiteSpace(county))
+            {
+                query = query.Where(h => h.OriginCountyName == county);
+            }
             if (!string.IsNullOrWhiteSpace(state))
             {
                 query = query.Where(h => h.OriginState == state);
@@ -87,6 +91,8 @@ namespace Heros.Pages.Heroes
                     FlagReceivedDate = h.FlagReceivedDate,
                     FlagSponsor = h.FlagSponsor,
                     OriginLocation = h.OriginLocation,
+                    TreeLatitude = h.TreeLatitude,
+                    TreeLongitude = h.TreeLongitude,
                     Notes = h.Notes
                 }).ToList();
             //Convert heroes to CSV

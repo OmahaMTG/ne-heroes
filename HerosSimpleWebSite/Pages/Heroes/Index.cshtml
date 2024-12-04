@@ -81,6 +81,12 @@
                 @Html.DisplayNameFor(model => model.Hero[0].FlagSponsor)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Hero[0].TreeLatitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hero[0].TreeLongitude)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Hero[0].Notes)
             </th>
         </tr>
@@ -154,6 +160,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FlagSponsor)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreeLatitude)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TreeLongitude)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Notes)
             </td>

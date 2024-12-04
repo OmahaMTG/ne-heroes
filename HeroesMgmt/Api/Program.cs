@@ -25,6 +25,7 @@ namespace Api
             builder.Services.AddGraphQLServer()
                 .RegisterDbContext<HeroDbContext>(DbContextKind.Pooled)
                 .AddFiltering()
+                .AddProjections()
                 .AddQueryType<Query>();
 
             var app = builder.Build();
